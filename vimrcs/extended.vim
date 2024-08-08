@@ -228,3 +228,7 @@ elseif &filetype == 'matlab'
     exec "!time octave %"
 endif
 endfunc
+
+set number
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprev<CR>
