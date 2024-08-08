@@ -17,4 +17,7 @@ try
 catch
 endtry' > ~/.vimrc
 
+git clone --depth=1 https://github.com/junegunn/fzf.git ~/.vim_runtime/my_plugins/fzf
+git clone --depth=1 https://github.com/junegunn/fzf.vim.git ~/.vim_runtime/my_plugins/fzf.vim
+
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
