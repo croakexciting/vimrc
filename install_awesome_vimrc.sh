@@ -17,7 +17,12 @@ try
 catch
 endtry' > ~/.vimrc
 
-git clone --depth=1 https://github.com/junegunn/fzf.git ~/.vim_runtime/my_plugins/fzf
-git clone --depth=1 https://github.com/junegunn/fzf.vim.git ~/.vim_runtime/my_plugins/fzf.vim
+if [ ! -d "${HOME}/.vim_runtime/my_plugins/fzf" ]; then
+    git clone --depth=1 https://github.com/junegunn/fzf.git ~/.vim_runtime/my_plugins/fzf
+    git clone --depth=1 https://github.com/junegunn/fzf.vim.git ~/.vim_runtime/my_plugins/fzf.vim
+fi
+
+echo "Tmux setup, please make sure tmux already installed"
+cp ~/.vim_runtime/tmuxs/tmux.conf ~/.tmux.conf
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
